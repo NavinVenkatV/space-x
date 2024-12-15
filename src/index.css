@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* CSS Class for Playfair Display Font with Variable Weights */
+/* Define Bebas Neue font */
+.bebas-neue {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Define Playfair Display font */
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700; /* Example weight */
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* You can add any other weight values, such as 500, 600, 800, etc. */
