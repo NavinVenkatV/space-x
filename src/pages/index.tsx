@@ -17,6 +17,7 @@ function Index() {
                     src="/spaceX.mp4" // Ensure this path is correct
                     autoPlay
                     loop
+                    poster="poster.jpg"
                     muted
                     className="absolute top-0 left-0 w-full h-full object-cover"
                 />
