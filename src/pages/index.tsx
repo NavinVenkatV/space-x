@@ -1,7 +1,14 @@
+import { useState } from "react";
 import Footer from "../components/footer";
 import Gallery from "../components/gallery";
+import HamburgerMenu from "../components/hamburger";
+import Sidebar from "../components/sidebar";
 
 function Index() {
+    const [isSidebarVisible, setIsSidebarVisible] = useState(false)
+    const toggleSidebar = ()=>{
+        setIsSidebarVisible(!isSidebarVisible)
+    }
     return (
         <div className="overflow-hidden">
             <div className="relative w-screen h-screen overflow-hidden text-white bebas-neue">
@@ -17,10 +24,11 @@ function Index() {
                 <div className="relative z-10 mx-5 lg:mx-20 my-10">
                     {/* Header Section */}
                     <div className="lg:flex justify-between items-center sticky">
-                        <div>
+                        <div className="flex justify-between">
                             <h1 className="text-center font-bold text-4xl lg:text-5xl tracking-widest items-center justify-center text-white cursor-pointer">
                                 SPACE X <i className="text-sm">beta</i>
                             </h1>
+                            <div className="lg:hidden text-lg text-right pr-3 cursor-pointer flex items-center justify-center" onClick={toggleSidebar}><HamburgerMenu/></div>
                         </div>
                         <div className="tracking-wide text-xl lg:text-2xl items-center justify-center cursor-pointer hidden lg:flex space-x-6">
                             <a href="https://navinpinkman.vercel.app/" className="m-3 relative group">
@@ -45,6 +53,17 @@ function Index() {
                             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
                         </a>
                     </div>
+                    {isSidebarVisible && (
+                <div className="fixed top-0 right-0 w-64 h-screen bg-black text-white z-50 shadow-lg lg:hidden">
+                    <Sidebar />
+                    <button
+                        className="absolute top-4 right-4 text-white text-2xl"
+                        onClick={toggleSidebar}
+                    >
+                        &times; {/* Close Button */}
+                    </button>
+                </div>
+            )}
 
                     {/* Main Section */}
                     <div className="flex flex-col justify-center h-screen text-white space-y-4">
@@ -73,6 +92,7 @@ function Index() {
             <div>
                 <Footer />
             </div>
+            
         </div>
     );
 }
