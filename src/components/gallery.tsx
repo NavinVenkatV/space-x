@@ -5,9 +5,10 @@ interface myLabel {
   label: string;
   image: string;
   butlabel : string
+  link : string
 }
 
-function Gallery({ label, image, butlabel }: myLabel) {
+function Gallery({ label, image, butlabel, link }: myLabel) {
   const [inView, setInView] = useState(false); // State to track if the element is in view
   const textRef = useRef<HTMLParagraphElement>(null); // Reference for the text paragraph
 
@@ -41,7 +42,7 @@ function Gallery({ label, image, butlabel }: myLabel) {
           >
             {label}
           </p>
-          <Button label={butlabel}/>
+          <Button label={butlabel} link={link}/>
         </div>
         <img src={image} alt="Elon Musk" />
       </div>

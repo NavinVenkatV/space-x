@@ -58,7 +58,7 @@ function Index() {
                 <div className="fixed top-0 right-0 w-64 h-screen bg-black text-white z-50 shadow-lg lg:hidden">
                     <Sidebar />
                     <button
-                        className="absolute top-4 right-4 text-white text-2xl"
+                        className="absolute top-4 right-4 text-white text-2xl pointer"
                         onClick={toggleSidebar}
                     >
                         &times; {/* Close Button */}
@@ -76,7 +76,7 @@ function Index() {
                         </p>
                         <a href="https://www.spacex.com/">
                             <button className="mt-6 px-10 py-2 border-2 border-white text-white shadow-lg hover:bg-white hover:text-black transition-all duration-300 ease-in-out">
-                                navin Venkat
+                                Coming soon...
                             </button>
                         </a>
                     </div>
@@ -84,11 +84,11 @@ function Index() {
             </div>
             <div id="gallery">
                 <Gallery label={"Elon Musk views Mars as a crucial step in humanity's future, believing that establishing a self-sustaining colony on the Red Planet is essential for ensuring the survival of the human species. He envisions Mars not only as a new frontier for exploration but as a way to push the boundaries of human knowledge and capabilities. Musk has famously stated, 'I want to die on Mars. Just not on impact,'' reflecting his commitment to this ambitious goal. He believes that making life multi-planetary will inspire future generations, showing that humanity can achieve the impossible and build a better future, both on Earth and beyond"}
-                    image="el.jpg" butlabel={"SPACE X"} />
+                    image="el.jpg" butlabel={"SPACE X"} link={'https://www.spacex.com/'}/>
                 <Gallery label="Jeff Bezos, the founder of Amazon and Blue Origin, envisions a future where humanity expands beyond Earth to enable growth and innovation while preserving the planet's natural beauty. He founded Blue Origin in 2000 with the goal of reducing the cost of space travel and making it accessible to more people."
-                    image="Screenshot 2024-12-15 165314.png" butlabel={"BLUE ORIGIN"} />
+                    image="Screenshot 2024-12-15 165314.png" butlabel={"BLUE ORIGIN"} link={'https://www.blueorigin.com/about-blue'} />
                 <Gallery label={"The National Aeronautics and Space Administration (NASA) is the United States' government agency responsible for exploring space and conducting scientific research related to aeronautics and astronomy. Established in 1958, NASA has played a pivotal role in advancing humanity's understanding of the universe, fostering innovation, and inspiring generations."}
-                    image="image.png" butlabel="NASA" />
+                    image="image.png" butlabel="NASA" link={'https://www.nasa.gov/'}/>
             </div>
             <div>
                 <Footer />
